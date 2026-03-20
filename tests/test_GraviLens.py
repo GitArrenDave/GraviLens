@@ -1,4 +1,4 @@
-"""Tests for `GraviLens` package."""
+"""Tests for `gravilens` package."""
 
 import GraviLens
 

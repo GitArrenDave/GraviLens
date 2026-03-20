@@ -5,13 +5,13 @@
 To install Gravitational Lensing, run this command in your terminal:
 
 ```sh
-uv add GraviLens
+uv add gravilens
 ```
 
 Or if you prefer to use `pip`:
 
 ```sh
-pip install GraviLens
+pip install gravilens
 ```
 
 ## From source
@@ -33,6 +33,6 @@ curl -OJL https://github.com/GitArrenDave/GraviLens/tarball/main
 Once you have a copy of the source, you can install it with:
 
 ```sh
-cd GraviLens
+cd gravilens
 uv sync
 ```

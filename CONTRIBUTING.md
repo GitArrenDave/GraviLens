@@ -54,13 +54,13 @@ Ready to contribute? Here's how to set up `GraviLens` for local development.
 2. Clone your fork locally:
 
    ```sh
-   git clone git@github.com:your_name_here/GraviLens.git
+   git clone git@github.com:your_name_here/gravilens.git
    ```
 
 3. Install your local copy with uv:
 
    ```sh
-   cd GraviLens/
+   cd gravilens/
    uv sync
    ```
 

@@ -31,8 +31,8 @@ To set up for local development:
 
 ```bash
 # Clone your fork
-git clone git@github.com:your_username/GraviLens.git
-cd GraviLens
+git clone git@github.com:your_username/gravilens.git
+cd gravilens
 
 # Install in editable mode with live updates
 uv tool install --editable .
