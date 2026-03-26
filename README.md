@@ -1,7 +1,6 @@
 # GraviLens
 
-![Coverage](https://raw.githubusercontent.com/GitArrenDave/GraviLens/main/.github/badges/coverage.svg)
-
+![Coverage](https://raw.githubusercontent.com/GitArrenDave/GraviLens/master/.github/badges/coverage.svg)
 Functions for geometric calculations and visualisation of plane waves and Mp-waves in general relativity.
 
 Created by **[David Johann](https://github.com/GitArrenDave)**
