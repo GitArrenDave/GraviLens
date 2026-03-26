@@ -410,6 +410,7 @@ class PlaneWaveModel:
         .. math::
 
             v(u1) = v(u0)+ \frac{1}{2} \int\limits_{u0}^{u1} |\dot X(u)|^2 + H(u,X) - \lambda du
+
         Parameters
         ----------
         u : float
@@ -694,7 +695,7 @@ class PlaneWaveModel:
         r"""Return the observation angle between an incoming null ray
         and the wave propagation direction :math:`\partial_v`.
 
-        Parameters.
+        Parameters
         ----------
         Xdot_o : array-like, shape (2,)
             Transverse observer velocity.
