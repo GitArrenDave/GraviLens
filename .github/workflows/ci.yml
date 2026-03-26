@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install setuptools
           pip install -e .
-          pip install pytest pytest-cov coverage-badge
+          pip install pytest pytest-cov coverage "genbadge[coverage]"
 
       - name: Run tests with coverage
         run: |
@@ -46,7 +46,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: |
           mkdir -p .github/badges
-          genbadge coverage -i coverage.xml -o .github/badges/coverage.svg
+          python -m genbadge.main coverage -i coverage.xml -o .github/badges/coverage.svg
 
       - name: Commit coverage badge
         if: github.ref == 'refs/heads/master'
