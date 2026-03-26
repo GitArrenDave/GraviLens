@@ -1,3 +1,4 @@
+from typing import cast
 from dataclasses import dataclass
 import numpy as np
 import pandas as pd
@@ -72,14 +73,21 @@ class GeodesicSolution:
         return pd.DataFrame(data)
 
     def event_at_index(self, i: int) -> GeodesicEvent:
+        x_dot_arr = cast(np.ndarray, self.x_dot)
+        y_dot_arr = cast(np.ndarray, self.y_dot)
+        v_dot_arr = cast(np.ndarray, self.v_dot)
+
+        x_dot = None if self.x_dot is None else float(x_dot_arr[i])
+        y_dot = None if self.y_dot is None else float(y_dot_arr[i])
+        v_dot = None if self.v_dot is None else float(v_dot_arr[i])
         return GeodesicEvent(
             u=float(self.u[i]),
             v=float(self.v[i]),
             x=float(self.x[i]),
             y=float(self.y[i]),
-            x_dot=None if self.x_dot is None else float(self.x_dot[i]),
-            y_dot=None if self.y_dot is None else float(self.y_dot[i]),
-            v_dot=None if self.v_dot is None else float(self.v_dot[i]),
+            x_dot=x_dot,
+            y_dot=y_dot,
+            v_dot=v_dot,
             i=int(i),
         )
 
