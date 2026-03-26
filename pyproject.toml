@@ -19,10 +19,13 @@ classifiers = [
 ]
 license = {text = "MIT"}
 dependencies = [
+  "numpy",
+  "matplotlib",
+  "pandas",
   "typer",
   "rich",
 ]
-requires-python = ">= 3.12"
+requires-python = ">= 3.14"
 
 [dependency-groups]
 dev = [
@@ -36,13 +39,15 @@ lint = [
 test = [
     "coverage",
     "pytest",
+    "pytest-cov",
 ]
 typecheck = [
     "ty",
 ]
 docs = [
-    "zensical",
-    "mkdocstrings-python",
+    "sphinx",
+    "furo",
+    "sphinx-autobuild",
 ]
 
 [project.urls]
@@ -50,9 +55,6 @@ bugs = "https://github.com/GitArrenDave/GraviLens/issues"
 changelog = "https://github.com/GitArrenDave/GraviLens/releases"
 documentation = "https://GitArrenDave.github.io/GraviLens/"
 homepage = "https://github.com/GitArrenDave/GraviLens"
-
-[project.scripts]
-GraviLens = "GraviLens.cli:app"
 
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.

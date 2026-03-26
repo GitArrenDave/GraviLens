@@ -173,7 +173,7 @@ def test_comoving_frcy_shift():
     B = model.B(u_o, u_e)
     BinvT_delta = np.linalg.solve(B.T, delta)
 
-    # thesis formula adapted to code convention lam < 0
+    # thesis formula
     h = model.h_mat
     lam_s = src_geo.lam  # negative in the current code conventions
 
@@ -182,7 +182,7 @@ def test_comoving_frcy_shift():
 
     z_theory = 1.0 + num / den
 
-    # numeric frequency shift from the implemented API
+    # numeric frequency shift
     Xdot_obs_o = np.array([obs_ev.x_dot, obs_ev.y_dot], dtype=float)
     Xdot_src_e = np.array([src_ev_at_ue.x_dot, src_ev_at_ue.y_dot], dtype=float)
 

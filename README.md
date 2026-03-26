@@ -1,59 +1,69 @@
-# Gravitational Lensing
+# GraviLens
 
-![PyPI version](https://img.shields.io/pypi/v/GraviLens.svg)
+![Coverage](https://raw.githubusercontent.com/GitArrenDave/GraviLens/main/.github/badges/coverage.svg)
 
-Functions for 3d and 2d graphical representation and calculations for Mp-waves
+Functions for geometric calculations and visualisation of plane waves and Mp-waves in general relativity.
 
-* Created by **[David Johann](https://github.com/GitArrenDave)**
-  * PyPI: https://pypi.org/user/none/
-* PyPI package: https://pypi.org/project/GraviLens/
-* Free software: MIT License
+Created by **[David Johann](https://github.com/GitArrenDave)**
+
+License: MIT
+
+Repository:
+https://github.com/GitArrenDave/GraviLens
+
 
 ## Features
 
-* TODO
+- Plane wave space-time models
+- Geodesic integration in Brinkmann coordinates
+- Lightcone and comoving source constructions
+- Frequency shift and angle formulas
+- 3D visualisation of geodesics
+
 
 ## Documentation
 
-Documentation is built with [Zensical](https://zensical.org/) and deployed to GitHub Pages.
+Documentation is built with **Sphinx** and deployed automatically with GitHub Pages.
 
-* **Live site:** https://GitArrenDave.github.io/GraviLens/
-* **Preview locally:** `just docs-serve` (serves at http://localhost:8000)
-* **Build:** `just docs-build`
+Live documentation:
 
-API documentation is auto-generated from docstrings using [mkdocstrings](https://mkdocstrings.github.io/).
+https://GitArrenDave.github.io/GraviLens/
 
-Docs deploy automatically on push to `main` via GitHub Actions. To enable this, go to your repo's Settings > Pages and set the source to **GitHub Actions**.
+Build locally:
 
-## Development
+pip install -r docs/requirements.txt
+sphinx-build docs docs/_build/html
+open docs/_build/html/index.html
 
-To set up for local development:
 
-```bash
-# Clone your fork
-git clone git@github.com:your_username/gravilens.git
-cd gravilens
+
+## Installation (local development)
+
+Clone the repository:
+
+git clone https://github.com/GitArrenDave/GraviLens.git
+
+cd GraviLens
+
+
 
 # Install in editable mode with live updates
-uv tool install --editable .
-```
+pip install -e
 
-This installs the CLI globally but with live updates - any changes you make to the source code are immediately available when you run `GraviLens`.
-
-Run tests:
-
-```bash
-uv run pytest
-```
-
-Run quality checks (format, lint, type check, test):
-
-```bash
-just qa
-```
 
 ## Author
 
-Gravitational Lensing was created in 2026 by David Johann.
+GraviLens was created in 2026 by David Johann.
+
+Built using
+
+- Python
+- NumPy
+- Matplotlib
+- Pytest
+- Sphinx
+- GitHub Actions
+
+
 
 Built with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
