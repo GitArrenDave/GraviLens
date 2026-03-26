@@ -49,7 +49,7 @@ This implementation currently assumes a diagonal transverse profile matrix.
 
 @dataclass
 class PlaneWaveModel:
-    """
+    r"""
     Diagonal plane-wave spacetime model in Brinkmann coordinates.
 
     Parameters
@@ -121,7 +121,7 @@ class PlaneWaveModel:
         ])
 
     def first_conjugate_u(self, u0=None) -> float | None:
-        """
+        r"""
         Return the first finite conjugate value of ``u``.
 
         A finite conjugate point occurs when one of the oscillatory transverse
@@ -192,8 +192,8 @@ class PlaneWaveModel:
         >>> model.H(3.0, 4.0)
         2.0
         """
-        X = np.array([x, y])
-        return X @ self.h_mat @ X
+        X = np.array([x, y],dtype=float)
+        return float(X @ self.h_mat @ X)
 
     def A(self, u, u0=None):
         r"""Return the fundamental matrix :math:`A(u,u_0)`
@@ -508,7 +508,7 @@ class PlaneWaveModel:
 
                \lambda = -2\dot v_0 + H(X_0) + \dot X_0\cdot\dot X_0.
         """
-        X0 = np.asarray(X0, float);
+        X0 = np.asarray(X0, float)
         X0_dot = np.asarray(X0_dot, float)
         H0 = self.H(X0[0], X0[1])
         return -2.0 * float(v0_dot) + H0 + float(X0_dot @ X0_dot)
@@ -530,7 +530,7 @@ class PlaneWaveModel:
         float
             The compatible initial value :math:`\dot v_0`.
         """
-        X0 = np.asarray(X0, float);
+        X0 = np.asarray(X0, float)
         X0_dot = np.asarray(X0_dot, float)
         H0 = self.H(X0[0], X0[1])
         return 0.5 * (-float(lam_target) + H0 + float(X0_dot @ X0_dot))
