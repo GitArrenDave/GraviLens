@@ -74,9 +74,10 @@ class PlaneWaveModel:
 
     .. math::
 
-       h_1 = h_+ - h_p,
-       \\qquad
-       h_2 = -h_+ - h_p.
+       \begin{aligned}
+       h_1 &= h_+ - h_p, \\
+       h_2 &= -h_+ - h_p.
+       \end{aligned}
 
     where :math:`h1 \geq 0` corresponds to gravity dominated waves and :math:`h1 < 0` to matter dominated waves.
 
@@ -144,7 +145,7 @@ class PlaneWaveModel:
 
         .. math::
 
-           u = u_0 + \\frac{\\pi}{\\sqrt{|h|}}.
+           u = u_0 + \frac{\pi}{\sqrt{|h|}}.
 
         Examples
         --------
@@ -407,6 +408,7 @@ class PlaneWaveModel:
 
     def v_geodesic(self, u, X, X_dot, X0, X0_dot, v0=0.0, lam=0.0, u0=None):
         r"""Evaluate the Brinkmann coordinate :math:`v(u)`.
+
         .. math::
 
             v(u1) = v(u0)+ \frac{1}{2} \int\limits_{u0}^{u1} |\dot X(u)|^2 + H(u,X) - \lambda du
