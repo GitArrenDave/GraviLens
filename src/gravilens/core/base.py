@@ -4,14 +4,14 @@ import numpy as np
 import pandas as pd
 
 def brinkmann_to_minkowski(u, v):
-    t = 0.5 * (u + v)
-    z = 0.5 * (v - u)
+    t = (u + v)/np.sqrt(2)
+    z = (v - u)/np.sqrt(2)
     return t, z
 
 
 def minkowski_to_brinkmann(t, z):
-    u = t - z
-    v = t + z
+    u = (t - z)/np.sqrt(2)
+    v = (t + z)/np.sqrt(2)
     return u, v
 
 @dataclass(frozen=True)
